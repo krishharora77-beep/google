@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sign in – Google Accounts</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: 'Roboto', Arial, sans-serif;
+    background: #fff;
+}
+
+/* CENTER BOX */
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* CARD */
+.card {
+    width: 360px;
+    border: 1px solid #dadce0;
+    border-radius: 8px;
+    padding: 40px 30px;
+    text-align: left;
+}
+
+/* LOGO */
+.logo {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.logo img {
+    width: 75px;
+}
+
+/* HEADINGS */
+h1 {
+    font-size: 24px;
+    font-weight: 400;
+    margin: 10px 0;
+    text-align: center;
+}
+
+.sub {
+    text-align: center;
+    font-size: 14px;
+    color: #5f6368;
+    margin-bottom: 30px;
+}
+
+/* INPUT FIELD */
+.field {
+    position: relative;
+    margin-bottom: 25px;
+}
+
+.field input {
+    width: 100%;
+    padding: 16px 10px;
+    border: 1px solid #dadce0;
+    border-radius: 4px;
+    font-size: 16px;
+    outline: none;
+}
+
+/* FLOAT LABEL */
+.field label {
+    position: absolute;
+    left: 10px;
+    top: 16px;
+    color: #5f6368;
+    font-size: 16px;
+    transition: 0.2s;
+    background: #fff;
+    padding: 0 5px;
+}
+
+.field input:focus + label,
+.field input:not(:placeholder-shown) + label {
+    top: -8px;
+    font-size: 12px;
+    color: #1a73e8;
+}
+
+/* LINKS */
+.link {
+    color: #1a73e8;
+    font-size: 14px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    display: inline-block;
+}
+
+/* FOOTER ACTION */
+.actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30px;
+}
+
+/* BUTTON */
+button {
+    background: #1a73e8;
+    color: white;
+    border: none;
+    padding: 10px 24px;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #1765cc;
+}
+</style>
+</head>
+
+<body>
+
+<div class="wrapper">
+    <div class="card">
+
+        <div class="logo">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg">
+        </div>
+
+        <h1>Sign in</h1>
+        <div class="sub">Use your Google Account</div>
+
+        <div class="field">
+            <input type="text" id="email" required placeholder=" ">
+            <label>Email or phone</label>
+        </div>
+
+        <div class="link">Forgot email?</div>
+
+        <div class="sub" style="text-align:left; margin-top:20px;">
+            Not your computer? Use Guest mode to sign in privately.
+        </div>
+
+        <div class="link">Learn more</div>
+
+        <div class="actions">
+            <div class="link">Create account</div>
+            <button>Next</button>
+        </div>
+
+    </div>
+</div>
+
+</body>
+</html>
